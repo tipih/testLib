@@ -10,7 +10,7 @@ greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
 TARGET = testLib
 TEMPLATE = app
-INCLUDEPATH += "C:\mosquitto\devel"
+
 
 SOURCES += main.cpp\
         testwidget.cpp \
@@ -25,8 +25,7 @@ FORMS    += testwidget.ui
 
 
 
-win32:CONFIG(release, debug|release): LIBS += -L$$PWD/../../../../mosquitto/devel/ -lmosquittopp
-else:win32:CONFIG(debug, debug|release): LIBS += -L$$PWD/../../../../mosquitto/devel/ -lmosquittopp
+win32: LIBS += -L$$PWD/mosquitto/devel/ -lmosquittopp
 
-INCLUDEPATH += $$PWD/../../../../mosquitto/devel
-DEPENDPATH += $$PWD/../../../../mosquitto/devel
+INCLUDEPATH += $$PWD/mosquitto/devel
+DEPENDPATH += $$PWD/mosquitto/devel
