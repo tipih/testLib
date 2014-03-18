@@ -23,8 +23,10 @@ FORMS    += testwidget.ui
 
 
 
-win32:CONFIG(release, debug|release): LIBS += -L$$PWD/../../../mosquitto/devel/ -lmosquittopp
-else:win32:CONFIG(debug, debug|release): LIBS += -L$$PWD/../../../mosquitto/devel/ -lmosquittopp
 
-INCLUDEPATH += $$PWD/../../../mosquitto/devel
-DEPENDPATH += $$PWD/../../../mosquitto/devel
+
+win32:CONFIG(release, debug|release): LIBS += -L$$PWD/../../../../mosquitto/devel/ -lmosquittopp
+else:win32:CONFIG(debug, debug|release): LIBS += -L$$PWD/../../../../mosquitto/devel/ -lmosquittopp
+
+INCLUDEPATH += $$PWD/../../../../mosquitto/devel
+DEPENDPATH += $$PWD/../../../../mosquitto/devel
